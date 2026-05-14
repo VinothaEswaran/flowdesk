@@ -1,29 +1,24 @@
-# FlowDesk 
-> AI-Powered Project & Client Management SaaS for Freelancers and Startups
-
----
-
-## Project Structure
-
-```
+FlowDesk
+Project and client management platform built for freelancers and small teams. Handles projects, invoices, client records, and AI-assisted communication from a single dashboard.
+Project Structure
 flowdesk/
-├── frontend/          ← Next.js 14 App
+├── frontend/
 │   ├── app/
-│   │   ├── page.tsx                    ← Root redirect
-│   │   ├── login/page.tsx              ← Login / Register
+│   │   ├── page.tsx
+│   │   ├── login/page.tsx
 │   │   └── dashboard/
-│   │       ├── layout.tsx              ← Sidebar layout
-│   │       ├── page.tsx                ← Dashboard home
-│   │       ├── projects/page.tsx       ← Kanban board
-│   │       ├── clients/page.tsx        ← Client management
-│   │       ├── invoices/page.tsx       ← Invoice tracker
-│   │       ├── ai-assistant/page.tsx   ← AI generator + chat
-│   │       └── insights/page.tsx       ← Charts & analytics
+│   │       ├── layout.tsx
+│   │       ├── page.tsx
+│   │       ├── projects/page.tsx
+│   │       ├── clients/page.tsx
+│   │       ├── invoices/page.tsx
+│   │       ├── ai-assistant/page.tsx
+│   │       └── insights/page.tsx
 │   ├── components/ui/Sidebar.tsx
 │   ├── lib/api.ts
 │   └── package.json
 │
-└── backend/           ← FastAPI App
+└── backend/
     ├── main.py
     ├── database.py
     ├── models/__init__.py
@@ -35,134 +30,56 @@ flowdesk/
     │   └── ai.py
     ├── requirements.txt
     └── .env.example
-```
+Prerequisites
 
----
+Node.js 18+
+Python 3.10+
+PostgreSQL
 
-## Setup Instructions
-
-### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- PostgreSQL installed and running
-
----
-
-### 1. Clone / Download the project
-
-```bash
-cd flowdesk
-```
-
----
-
-### 2. Backend Setup
-
-```bash
-cd backend
-
-# Create virtual environment
+Backend Setup
+bashcd backend
 python -m venv venv
-
-# Activate it
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
-
-# Install dependencies
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
 pip install -r requirements.txt
-
-# Copy env file and fill values
 cp .env.example .env
-```
-
-Edit `.env`:
-```
+Edit .env:
 DATABASE_URL=postgresql://postgres:yourpassword@localhost/flowdesk_db
-ANTHROPIC_API_KEY=sk-ant-xxxx         ← Get from console.anthropic.com
-SECRET_KEY=any-random-secret-string
-```
-
+GROQ_API_KEY=your_groq_api_key
+SECRET_KEY=your-secret-key
 Create the database:
-```bash
-psql -U postgres -c "CREATE DATABASE flowdesk_db;"
-```
-
-Run the backend:
-```bash
-uvicorn main:app --reload
-# Runs on http://localhost:8000
-# API docs at http://localhost:8000/docs
-```
-
----
-
-### 3. Frontend Setup
-
-```bash
-cd ../frontend
-
-# Install dependencies
+bashpsql -U postgres -c "CREATE DATABASE flowdesk_db;"
+Start the backend:
+bashuvicorn main:app --reload
+Runs at http://localhost:8000. API docs available at http://localhost:8000/docs.
+Frontend Setup
+bashcd frontend
 npm install
-
-# Run the dev server
 npm run dev
-# Runs on http://localhost:3000
-```
-
----
-
-## Running Both Together
-
+Runs at http://localhost:3000.
+Running the App
 Open two terminals:
-
-**Terminal 1 — Backend:**
-```bash
-cd flowdesk/backend
-source venv/bin/activate
+Terminal 1:
+bashcd backend
+venv\Scripts\activate
 uvicorn main:app --reload
-```
-
-**Terminal 2 — Frontend:**
-```bash
-cd flowdesk/frontend
+Terminal 2:
+bashcd frontend
 npm run dev
-```
+Open http://localhost:3000 in your browser.
+Features
 
-Open `http://localhost:3000` in your browser.
+JWT-based authentication
+Project management with Kanban board
+Client records and contact management
+Invoice tracking
+AI-powered email and proposal generator
+AI chat assistant for freelance workflows
+Analytics dashboard with charts
 
----
+Tech Stack
 
-## Features
-
-| Feature | 
-|---|---|
-| Auth (Register / Login / JWT) | 
-| Project Management (CRUD) | 
-| Kanban Task Board | 
-| Client Management | 
-| Invoice Tracker | 
-| AI Email/Proposal Generator | 
-| AI Chat Assistant | 
-| Insights & Charts | 
-
----
-
-## Tech Stack
-
-- **Frontend**: Next.js 14, React, TailwindCSS, Recharts
-- **Backend**: FastAPI, SQLAlchemy, PostgreSQL
-- **Auth**: JWT (python-jose + passlib bcrypt)
-- **AI**: Anthropic Claude API
-- **Charts**: Recharts
-
----
-
-## Get Anthropic API Key
-
-1. Go to https://console.anthropic.com
-2. Sign up / Login
-3. Go to API Keys → Create Key
-4. Paste it in `backend/.env` as `ANTHROPIC_API_KEY`
-
----
-
+Frontend: Next.js 14, TailwindCSS, Recharts
+Backend: FastAPI, SQLAlchemy, PostgreSQL
+Auth: JWT with python-jose and bcrypt
+AI: Groq API (llama-3.3-70b)
