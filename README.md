@@ -134,7 +134,7 @@ Open `http://localhost:3000` in your browser.
 
 ## Features
 
-| Feature | Status |
+| Feature | 
 |---|---|
 | Auth (Register / Login / JWT) | 
 | Project Management (CRUD) | 
