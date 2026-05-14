@@ -1,9 +1,9 @@
-# FlowDesk 🚀
+# FlowDesk 
 > AI-Powered Project & Client Management SaaS for Freelancers and Startups
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 flowdesk/
@@ -39,7 +39,7 @@ flowdesk/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Node.js 18+
@@ -111,7 +111,7 @@ npm run dev
 
 ---
 
-## 🚀 Running Both Together
+## Running Both Together
 
 Open two terminals:
 
@@ -132,22 +132,22 @@ Open `http://localhost:3000` in your browser.
 
 ---
 
-## ✅ Features
+## Features
 
 | Feature | Status |
 |---|---|
-| Auth (Register / Login / JWT) | ✅ |
-| Project Management (CRUD) | ✅ |
-| Kanban Task Board | ✅ |
-| Client Management | ✅ |
-| Invoice Tracker | ✅ |
-| AI Email/Proposal Generator | ✅ |
-| AI Chat Assistant | ✅ |
-| Insights & Charts | ✅ |
+| Auth (Register / Login / JWT) | 
+| Project Management (CRUD) | 
+| Kanban Task Board | 
+| Client Management | 
+| Invoice Tracker | 
+| AI Email/Proposal Generator | 
+| AI Chat Assistant | 
+| Insights & Charts | 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 14, React, TailwindCSS, Recharts
 - **Backend**: FastAPI, SQLAlchemy, PostgreSQL
@@ -157,7 +157,7 @@ Open `http://localhost:3000` in your browser.
 
 ---
 
-## 🔑 Get Anthropic API Key
+## Get Anthropic API Key
 
 1. Go to https://console.anthropic.com
 2. Sign up / Login
@@ -166,4 +166,3 @@ Open `http://localhost:3000` in your browser.
 
 ---
 
-Built with ❤️ for product-based company interviews.
