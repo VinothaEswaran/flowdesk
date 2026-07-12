@@ -2,6 +2,10 @@
 
 Project and client management platform built for freelancers and small teams. Handles projects, invoices, client records, and AI-assisted communication from a single dashboard.
 
+## Live Demo
+
+https://flowdesk-12.onrender.com
+
 ## Project Structure
 
 ```
@@ -37,13 +41,13 @@ flowdesk/
 
 ## Prerequisites
 
-- Node.js 18+
-- Python 3.10+
-- PostgreSQL
+* Node.js 18+
+* Python 3.10+
+* PostgreSQL
 
 ## Backend Setup
 
-```bash
+```
 cd backend
 python -m venv venv
 venv\Scripts\activate
@@ -61,7 +65,7 @@ SECRET_KEY=your-secret-key
 
 Create the database and start the server:
 
-```bash
+```
 psql -U postgres -c "CREATE DATABASE flowdesk_db;"
 uvicorn main:app --reload
 ```
@@ -70,7 +74,7 @@ Runs at `http://localhost:8000`. API docs at `http://localhost:8000/docs`.
 
 ## Frontend Setup
 
-```bash
+```
 cd frontend
 npm install
 npm run dev
@@ -84,7 +88,7 @@ Open two terminals:
 
 Terminal 1:
 
-```bash
+```
 cd backend
 venv\Scripts\activate
 uvicorn main:app --reload
@@ -92,7 +96,7 @@ uvicorn main:app --reload
 
 Terminal 2:
 
-```bash
+```
 cd frontend
 npm run dev
 ```
@@ -101,17 +105,17 @@ Open `http://localhost:3000` in your browser.
 
 ## Features
 
-- JWT authentication (register, login)
-- Project management with Kanban board
-- Client records and contact management
-- Invoice tracking and status management
-- AI-powered email and proposal generator
-- AI chat assistant for freelance workflows
-- Analytics dashboard with charts
+* JWT authentication (register, login)
+* Project management with Kanban board
+* Client records and contact management
+* Invoice tracking and status management
+* AI-powered email and proposal generator
+* AI chat assistant for freelance workflows
+* Analytics dashboard with charts
 
 ## Tech Stack
 
-- **Frontend:** Next.js 14, TailwindCSS, Recharts
-- **Backend:** FastAPI, SQLAlchemy, PostgreSQL
-- **Auth:** JWT with python-jose and bcrypt
-- **AI:** Groq API with llama-3.3-70b
+* Frontend: Next.js 14, TailwindCSS, Recharts
+* Backend: FastAPI, SQLAlchemy, PostgreSQL
+* Auth: JWT with python-jose and bcrypt
+* AI: Groq API with llama-3.3-70b
